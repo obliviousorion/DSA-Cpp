@@ -1,7 +1,11 @@
 [
 	{
-		"key": "ctrl+shift+r",
+		"key": "ctrl+alt+enter",
 		"command": "workbench.action.tasks.runTask",
 		"args": "Run"
 	}
+	// {
+	// 	"key": "ctrl+alt+enter",
+	// 	"command": "code-runner.run"
+	// }
 ]

@@ -6,7 +6,8 @@
       "extensions": [
         "ms-vscode.cpptools",
         "GitHub.copilot",
-        "spencerwmiles.vscode-task-buttons"
+        "spencerwmiles.vscode-task-buttons",
+        
       ],
       // Injects workspace settings to pin your executable task down below
       "settings": {

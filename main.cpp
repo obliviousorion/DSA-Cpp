@@ -23,7 +23,7 @@ public:
 
             int mid = low + (high - low) / 2;
 
-            if (arr[mid] > arr[high]) {
+            if(arr[mid] >= arr[low]){
                 low = mid + 1;
             } else {
                 ansIndex = mid;

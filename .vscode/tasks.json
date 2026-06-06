@@ -4,9 +4,17 @@
         {
             "label": "Run",
             "type": "shell",
-            "command": "./run",
+            "command": "./run", 
+            "windows": {
+                "command": "cmd",
+                "args": [
+                    "/c",
+                    "g++ -O3 main.cpp -o main.exe && main.exe < input.txt > output.txt && type output.txt"
+                ]
+            },
             "presentation": {
-                "reveal": "always"
+                "reveal": "always",
+                "clear": true
             }
         }
     ]

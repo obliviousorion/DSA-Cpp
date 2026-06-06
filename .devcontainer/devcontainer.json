@@ -1,0 +1,24 @@
+{
+  "name": "C++ DSA Playground",
+  "customizations": {
+    "vscode": {
+      // Automatically installs these extensions when the cloud workspace opens
+      "extensions": [
+        "ms-vscode.cpptools",
+        "GitHub.copilot",
+        "spencerwmiles.vscode-task-buttons"
+      ],
+      // Injects workspace settings to pin your executable task down below
+      "settings": {
+        "VsCodeTaskButtons.showCounter": false,
+        "VsCodeTaskButtons.tasks": [
+          {
+            "label": "$(play) Run",
+            "task": "Run",
+            "tooltip": "Compile and run your scratchpad main.cpp"
+          }
+        ]
+      }
+    }
+  }
+}

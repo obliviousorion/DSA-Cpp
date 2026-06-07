@@ -1,7 +1,12 @@
 /*
  * Problem: Find Square Root of N
+ * Description: Given a non-negative integer N, compute and return its square root. 
+ *              If N is not a perfect square, return the floor value of the square root.
  * Time Complexity: O(log N)
  * Space Complexity: O(1)
+ * 
+ * Approach Hint: Perform binary search on the range [0, N]. In each step, compare mid * mid with N 
+ *                and adjust the search boundaries. Use long long to avoid overflow when calculating mid * mid.
  */
 
 #include <bits/stdc++.h>

@@ -44,3 +44,5 @@ You are an automated file-system, code-organization, and repository synchronizat
      git push origin main
      ```
    - Report a successful synchronization summary to the user.
+
+#Note: For the problem itself, you can add relevant information as well from the internet, Not theory of the topic but a little hint of the approach and problem description. Keep it short, crisp and to the point

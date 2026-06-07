@@ -1,2 +1,2 @@
 #!/bin/bash
-g++ -O3 main.cpp -o main && ./main < input.txt > output.txt && cat output.txt
+g++ -O3 main.cpp -o main.exe && cat input.txt | ./main.exe > output.txt && echo "" && echo "[Output]:" && cat output.txt && echo "" && rm main.exe

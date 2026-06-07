@@ -6,11 +6,7 @@
             "type": "shell",
             "command": "./run", 
             "windows": {
-                "command": "cmd",
-                "args": [
-                    "/c",
-                    "g++ -O3 main.cpp -o main.exe && main.exe < input.txt > output.txt && type output.txt"
-                ]
+                "command": "g++ -O3 main.cpp -o main.exe; if ($?) { cat input.txt | .\\main.exe > output.txt; echo \"\"; echo \"[Output]:\"; cat output.txt; echo \"\"; rm main.exe }"
             },
             "presentation": {
                 "reveal": "always",

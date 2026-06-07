@@ -2,36 +2,32 @@
 using namespace std;
 
 // Section : Binary Search
-// Problem : Minimum Rotations for Sorted Array.
+// Problem : Find Square Root of N
+
+// Determine square root of N and if N is not a perfect square
+// determine the floor value of sqrt(N).
+
 
 class Solution{
 public:
-    int minRotations(int arr[], int n){
-        if (n == 0) {
-            return -1;
-        }
-
+    int findSqrtOfN(int n){
         int low = 0;
-        int high = n - 1;
-        int ansIndex = -1;
-
+        int high = n;
+        int ans = -1;
+        // we need to find k such that k * k is n
         while (low <= high) {
-            if (arr[low] <= arr[high]) {
-                ansIndex = low;
-                break;
-            }
-
             int mid = low + (high - low) / 2;
-
-            if(arr[mid] >= arr[low]){
+            long long square = (long long)mid * mid;
+            if(square == n){
+                return mid;
+            } else if(square < n){
+                ans = mid;
                 low = mid + 1;
             } else {
-                ansIndex = mid;
                 high = mid - 1;
             }
         }
-
-        return ansIndex;
+        return ans;
     }
 };
 
@@ -39,11 +35,7 @@ public:
 int main() {
     int n;
     cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++) {
-        cin >> arr[i];
-    }
     Solution sol;
-    cout << sol.minRotations(arr, n);
+    cout << sol.findSqrtOfN(n);
     return 0;
 }

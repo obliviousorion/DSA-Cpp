@@ -1,6 +1,6 @@
 {
     "code-runner.executorMap": {
-        "cpp": "cd $dir && cmd /c \"g++ -O3 $fileName -o main.exe\" && cmd /c \"main.exe < input.txt > output.txt\" && cmd /c \"type output.txt\""
+        "cpp": "cd $dir && g++ -O3 $fileName -o main.exe && cat input.txt | ./main.exe > output.txt && echo \"\" && echo \"[Output]:\" && cat output.txt && echo \"\" && rm main.exe"
     },  
     "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,

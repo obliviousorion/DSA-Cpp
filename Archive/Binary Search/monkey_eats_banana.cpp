@@ -1,9 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Section : Binary Search
-// Problem : Monkey Eats Banana
-
+/*
+ * Problem : Monkey Eats Banana (Koko Eating Bananas)
+ * Description : Find the minimum integer eating speed K (bananas per hour) such that all piles of bananas can be eaten within H hours.
+ * Approach : Binary search on the answer in the range [1, max(piles)].
+ *            For each mid speed, check the total hours required to finish all piles.
+ * Time Complexity : O(N * log(M)) where N is the number of piles and M is the maximum bananas in a pile.
+ * Space Complexity : O(1)
+ */
 
 class Solution {
 public:
@@ -46,21 +51,3 @@ public:
         return low; // low naturally converges to the optimal answer
     }
 };
-
-int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    int n, h;
-    if (cin >> n >> h) {
-        int arr[n];
-        for (int i = 0; i < n; i++) {
-            cin >> arr[i];
-        }
-
-        Solution sol;
-        cout << sol.minimum_rate_to_eat_bananas(arr, n, h) << "\n";
-    }
-    return 0;
-}

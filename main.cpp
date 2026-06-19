@@ -1,49 +1,28 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Section : Binary Search
-// Problem : Monkey Eats Banana
-
+// Section : Strings
+// Problem : Remove Outermost Parentheses
 
 class Solution {
 public:
-    // Pass 'n' explicitly since raw arrays don't track their own size
-    int findMax(int arr[], int n) {
-        int maxm = INT_MIN;
-        for (int i = 0; i < n; i++) {
-            if (arr[i] > maxm) {
-                maxm = arr[i];
-            }
-        }
-        return maxm;
-    }
-
-    // Changed return type to long long to insulate against overflow
-    long long calculate_total_hours(int arr[], int n, int hourlyRate) {
-        long long totalHours = 0;
-        for (int i = 0; i < n; i++) {
-            // Using integer arithmetic for ceil avoids floating-point precision issues:
-            // ceil(a / b) is equivalent to (a + b - 1) / b
-            totalHours += ((long long)arr[i] + hourlyRate - 1) / hourlyRate;
-        }
-        return totalHours;
-    }
-
-    int minimum_rate_to_eat_bananas(int arr[], int n, int h) {
-        int low = 1;
-        int high = findMax(arr, n); // Passed n correctly
-        
-        while (low <= high) {
-            int mid = low + (high - low) / 2;
-            long long totalHours = calculate_total_hours(arr, n, mid);
-            
-            if (totalHours <= h) {
-                high = mid - 1; // Rate is valid, try to find a smaller one
+    string removeOuterParentheses(string s) {
+        string newString = "";
+        newString.reserve(s.length());
+        int depth = 0;
+        for (char c: s) {
+            if (c == '(') {
+                if (depth++ > 0) {
+                    newString += c;
+                }
+                
             } else {
-                low = mid + 1;  // Too slow, must speed up
+                if (--depth > 0) {
+                    newString += c;
+                }
             }
         }
-        return low; // low naturally converges to the optimal answer
+        return newString;
     }
 };
 
@@ -52,15 +31,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n, h;
-    if (cin >> n >> h) {
-        int arr[n];
-        for (int i = 0; i < n; i++) {
-            cin >> arr[i];
-        }
-
+    string s;
+    if (cin >> s) {
         Solution sol;
-        cout << sol.minimum_rate_to_eat_bananas(arr, n, h) << "\n";
+        cout << sol.removeOuterParentheses(s) << "\n";
     }
+
     return 0;
 }

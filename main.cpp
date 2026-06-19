@@ -2,27 +2,12 @@
 using namespace std;
 
 // Section : Strings
-// Problem : Remove Outermost Parentheses
+// Problem : Longest Common Prefix
 
 class Solution {
 public:
-    string removeOuterParentheses(string s) {
-        string newString = "";
-        newString.reserve(s.length());
-        int depth = 0;
-        for (char c: s) {
-            if (c == '(') {
-                if (depth++ > 0) {
-                    newString += c;
-                }
-                
-            } else {
-                if (--depth > 0) {
-                    newString += c;
-                }
-            }
-        }
-        return newString;
+    string longestCommonPrefix(vector<string>& words) {
+        
     }
 };
 
@@ -31,10 +16,14 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s;
-    if (cin >> s) {
+    int n;
+    while (cin >> n) {
+        vector<string> strs(n);
+        for (int i = 0; i < n; i++) {
+            cin >> strs[i];
+        }
         Solution sol;
-        cout << sol.removeOuterParentheses(s) << "\n";
+        cout << sol.longestCommonPrefix(strs) << "\n";
     }
 
     return 0;

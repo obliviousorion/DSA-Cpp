@@ -10,5 +10,9 @@
     "gemini.codeSuggestions.enabled": false,
     "gemini.agent.autonomousMode": false,
     "editor.inlineSuggest.suppressSuggestions": true,
-    "dsa.keybindingsEnabled": true
+    "dsa.keybindingsEnabled": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "editor.formatOnSave": true,
+    "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+    "errorLens.delay": 100
 }

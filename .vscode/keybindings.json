@@ -1,11 +1,24 @@
+// [
+// 	{
+// 		"key": "ctrl+alt+enter",
+// 		"command": "workbench.action.tasks.runTask",
+// 		"args": "Run"
+// 	}
+// 	// {
+// 	// 	"key": "ctrl+alt+enter",
+// 	// 	"command": "code-runner.run"
+// 	// }
+// ]
+
 [
-	{
-		"key": "ctrl+alt+enter",
-		"command": "workbench.action.tasks.runTask",
-		"args": "Run"
-	}
-	// {
-	// 	"key": "ctrl+alt+enter",
-	// 	"command": "code-runner.run"
-	// }
+    {
+        "key": "ctrl+alt+enter",
+        "command": "-antigravity.agent.acceptPlan"
+    },
+    {
+        "key": "ctrl+alt+enter",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Run",
+        "when": "editorTextFocus" 
+    }
 ]

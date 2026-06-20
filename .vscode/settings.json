@@ -1,9 +1,18 @@
 {
     "code-runner.executorMap": {
         "cpp": "cd $dir && g++ -O3 $fileName -o main.exe && cat input.txt | ./main.exe > output.txt && echo \"\" && echo \"[Output]:\" && cat output.txt && echo \"\" && rm main.exe"
-    },  
+    },
     "code-runner.runInTerminal": true,
     "code-runner.clearPreviousOutput": true,
     "code-runner.saveFileBeforeRun": true,
-    "go.diagnostic.vulncheck": "Imports"
+    "go.diagnostic.vulncheck": "Imports",
+    "editor.inlineSuggest.enabled": false,
+    "gemini.codeSuggestions.enabled": false,
+    "gemini.agent.autonomousMode": false,
+    "editor.inlineSuggest.suppressSuggestions": true,
+    "dsa.keybindingsEnabled": true,
+    "C_Cpp.default.cppStandard": "c++20",
+    "editor.formatOnSave": true,
+    "errorLens.enabledDiagnosticLevels": ["error", "warning"],
+    "errorLens.delay": 100
 }

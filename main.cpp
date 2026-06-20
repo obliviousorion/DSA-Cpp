@@ -2,24 +2,42 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Learn stack
+// Problem : Implementing Queue using arrays
 
-class MyStack {
+class MyQueue {
 private:
-    int arr[1000];
-    int top;
+    int* arr;
+    int qFront;
+    int qRear;
+    int capacity;
+    int count;
+
 public:
-    MyStack() {
-        top = -1;
-    }
-    
-    void push(int x) {
-        // Write push logic here
+    MyQueue(int capacity) {
         
     }
-    
-    int pop() {
-        // Write pop logic here
+
+    void enqueue(int num) {
+        
+    }
+
+    int dequeue() {
+        
+    }
+
+    int getFront() {
+        
+    }
+
+    bool empty() {
+        
+    }
+
+    bool full() {
+        
+    }
+
+    int size() {
         
     }
 };
@@ -29,21 +47,28 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int q;
-    while (cin >> q) {
-        MyStack s;
+    int capacity, q;
+    while (cin >> capacity >> q) {
+        MyQueue s(capacity);
         while (q--) {
             int type;
             cin >> type;
             if (type == 1) {
-                int x;
-                cin >> x;
-                s.push(x);
+                int num;
+                cin >> num;
+                s.enqueue(num);
             } else if (type == 2) {
-                cout << s.pop() << " ";
+                cout << s.dequeue() << "\n";
+            } else if (type == 3) {
+                cout << s.getFront() << "\n";
+            } else if (type == 4) {
+                cout << (s.empty() ? "true" : "false") << "\n";
+            } else if (type == 5) {
+                cout << (s.full() ? "true" : "false") << "\n";
+            } else if (type == 6) {
+                cout << s.size() << "\n";
             }
         }
-        cout << "\n";
     }
 
     return 0;

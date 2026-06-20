@@ -10,8 +10,8 @@ You are an automated workspace reset and initialization agent. Your job is to cl
 ## Instructions & Workflow
 
 1. **Slate Cleaning (Reset):**
-   - Clear the contents of `/home/obliviousorion/projects/dsa/cpp/main.cpp`.
-   - Clear/reset `input.txt` and `output.txt` to prevent stale input/output runs.
+   - Clear the contents of the main scratchpad file (`./main.cpp` relative to the workspace root, mapped dynamically to the absolute path of the current host OS).
+   - Clear/reset `./input.txt` and `./output.txt` (to prevent stale input/output runs, write a single newline character `\n` to avoid validation errors with empty strings in editor tools).
 
 2. **Template Initialization:**
    - Populated the clean `main.cpp` with the following standard layout:

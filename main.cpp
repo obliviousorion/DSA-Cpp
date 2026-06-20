@@ -2,11 +2,12 @@
 using namespace std;
 
 // Section : Strings
-// Problem : Sort Characters by Frequency
+// Problem : Roman to Integer
 
 class Solution {
 public:
-    string frequencySort(string s) {
+    int romanToInt(string s) {
+        // Write solution logic here
         
     }
 };
@@ -19,7 +20,7 @@ int main() {
     string s;
     while (cin >> s) {
         Solution sol;
-        cout << sol.frequencySort(s) << "\n";
+        cout << sol.romanToInt(s) << "\n";
     }
 
     return 0;

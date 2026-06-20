@@ -1,14 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 // Section : Strings
-// Problem : Rotate String
+// Problem : Sort Characters by Frequency
 
 class Solution {
 public:
-    bool rotateString(string s, string goal) {
-
+    string frequencySort(string s) {
         
     }
 };
@@ -18,14 +16,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s, goal;
-    while (cin >> s >> goal) {
+    string s;
+    while (cin >> s) {
         Solution sol;
-        if (sol.rotateString(s, goal)) {
-            cout << "true\n";
-        } else {
-            cout << "false\n";
-        }
+        cout << sol.frequencySort(s) << "\n";
     }
 
     return 0;

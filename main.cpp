@@ -1,14 +1,14 @@
 #include <bits/stdc++.h>
-#include <unordered_map>
 using namespace std;
 
+
 // Section : Strings
-// Problem : Isomorphic Strings
+// Problem : Rotate String
 
 class Solution {
 public:
-    bool isIsomorphic(string s, string t) {
-        unordered_map<char, char> mapofworld;
+    bool rotateString(string s, string goal) {
+
         
     }
 };
@@ -18,10 +18,10 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s, t;
-    while (cin >> s >> t) {
+    string s, goal;
+    while (cin >> s >> goal) {
         Solution sol;
-        if (sol.isIsomorphic(s, t)) {
+        if (sol.rotateString(s, goal)) {
             cout << "true\n";
         } else {
             cout << "false\n";

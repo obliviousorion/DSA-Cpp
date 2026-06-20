@@ -12,7 +12,14 @@
     "editor.inlineSuggest.suppressSuggestions": true,
     "dsa.keybindingsEnabled": true,
     "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.compilerPath": "C:/MinGW/bin/g++.exe",
     "editor.formatOnSave": true,
     "errorLens.enabledDiagnosticLevels": ["error", "warning"],
-    "errorLens.delay": 100
+    "errorLens.delay": 100,
+    "clangd.arguments": [
+        "--query-driver=**"
+    ]
+    // "clangd.arguments": [
+    //     "--query-driver=C:\\msys64\\ucrt64\\bin\\g++.exe"
+    // ]
 }

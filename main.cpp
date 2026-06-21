@@ -2,12 +2,27 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Check for Balanced Parentheses
+// Problem : Implement Min Stack
 
-class Solution {
+class MinStack {
 public:
-    bool isValid(string s) {
-        // Write solution logic here
+    MinStack() {
+        
+    }
+    
+    void push(int val) {
+        
+    }
+    
+    void pop() {
+        
+    }
+    
+    int top() {
+        
+    }
+    
+    int getMin() {
         
     }
 };
@@ -17,10 +32,24 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s;
-    while (cin >> s) {
-        Solution sol;
-        cout << (sol.isValid(s) ? "true" : "false") << "\n";
+    int q;
+    while (cin >> q) {
+        MinStack s;
+        while (q--) {
+            int type;
+            cin >> type;
+            if (type == 1) {
+                int x;
+                cin >> x;
+                s.push(x);
+            } else if (type == 2) {
+                s.pop();
+            } else if (type == 3) {
+                cout << s.top() << "\n";
+            } else if (type == 4) {
+                cout << s.getMin() << "\n";
+            }
+        }
     }
 
     return 0;

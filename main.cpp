@@ -2,11 +2,11 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Implement Stack using Queues
+// Problem : Implement Queue using Stacks
 
-class MyStack {
+class MyQueue {
 public:
-    MyStack() {
+    MyQueue() {
         
     }
     
@@ -18,7 +18,7 @@ public:
         
     }
     
-    int top() {
+    int peek() {
         
     }
     
@@ -34,20 +34,20 @@ int main() {
 
     int q;
     while (cin >> q) {
-        MyStack s;
+        MyQueue que;
         while (q--) {
             int type;
             cin >> type;
             if (type == 1) {
                 int x;
                 cin >> x;
-                s.push(x);
+                que.push(x);
             } else if (type == 2) {
-                cout << s.pop() << "\n";
+                cout << que.pop() << "\n";
             } else if (type == 3) {
-                cout << s.top() << "\n";
+                cout << que.peek() << "\n";
             } else if (type == 4) {
-                cout << (s.empty() ? "true" : "false") << "\n";
+                cout << (que.empty() ? "true" : "false") << "\n";
             }
         }
     }

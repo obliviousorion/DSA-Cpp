@@ -2,12 +2,12 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Next Greater Element
+// Problem : Next Greater Element II
 
 class Solution {
 public:
-    // Function to find the next greater element for each element of the array.
-    vector<long long> nextLargerElement(vector<long long> arr, int n) {
+    // Function to find the next greater element for each element in a circular array.
+    vector<int> nextGreaterElements(vector<int>& nums) {
         // Write solution logic here
     }
 };
@@ -22,12 +22,12 @@ int main() {
         while (t--) {
             int n;
             cin >> n;
-            vector<long long> arr(n);
+            vector<int> nums(n);
             for (int i = 0; i < n; i++) {
-                cin >> arr[i];
+                cin >> nums[i];
             }
             Solution ob;
-            vector<long long> res = ob.nextLargerElement(arr, n);
+            vector<int> res = ob.nextGreaterElements(nums);
             for (int i = 0; i < n; i++) {
                 cout << res[i] << " ";
             }

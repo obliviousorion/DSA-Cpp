@@ -2,13 +2,13 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Convert Infix to Postfix
+// Problem : Infix to Prefix
 
 class Solution {
 public:
+    // Function to convert an infix expression to a postfix expression.
     string infixToPostfix(string s) {
         // Write solution logic here
-        
     }
 };
 
@@ -19,8 +19,8 @@ int main() {
 
     string s;
     while (cin >> s) {
-        Solution sol;
-        cout << sol.infixToPostfix(s) << "\n";
+        Solution ob;
+        cout << ob.infixToPostfix(s) << "\n";
     }
 
     return 0;

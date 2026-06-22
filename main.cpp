@@ -2,12 +2,12 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Infix to Prefix
+// Problem : Next Greater Element
 
 class Solution {
 public:
-    // Function to convert an infix expression to a postfix expression.
-    string infixToPostfix(string s) {
+    // Function to find the next greater element for each element of the array.
+    vector<long long> nextLargerElement(vector<long long> arr, int n) {
         // Write solution logic here
     }
 };
@@ -17,11 +17,22 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s;
-    while (cin >> s) {
-        Solution ob;
-        cout << ob.infixToPostfix(s) << "\n";
+    int t;
+    if (cin >> t) {
+        while (t--) {
+            int n;
+            cin >> n;
+            vector<long long> arr(n);
+            for (int i = 0; i < n; i++) {
+                cin >> arr[i];
+            }
+            Solution ob;
+            vector<long long> res = ob.nextLargerElement(arr, n);
+            for (int i = 0; i < n; i++) {
+                cout << res[i] << " ";
+            }
+            cout << "\n";
+        }
     }
-
     return 0;
 }

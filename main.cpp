@@ -2,13 +2,13 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Previous Smaller Element
+// Problem : Trapping Rain Water
 
 class Solution {
 public:
-    vector<int> prevSmaller(vector<int>& arr) {
+    int trap(vector<int>& height) {
         // Write solution logic here
-        return {};
+        return 0;
     }
 };
 
@@ -19,16 +19,12 @@ int main() {
 
     int n;
     if (cin >> n) {
-        vector<int> arr(n);
+        vector<int> height(n);
         for (int i = 0; i < n; i++) {
-            cin >> arr[i];
+            cin >> height[i];
         }
         Solution ob;
-        vector<int> res = ob.prevSmaller(arr);
-        for (int i = 0; i < n; i++) {
-            cout << res[i] << " ";
-        }
-        cout << "\n";
+        cout << ob.trap(height) << "\n";
     }
 
     return 0;

@@ -2,13 +2,13 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Next Greater Element II
+// Problem : Previous Smaller Element
 
 class Solution {
 public:
-    // Function to find the next greater element for each element in a circular array.
-    vector<int> nextGreaterElements(vector<int>& nums) {
+    vector<int> prevSmaller(vector<int>& arr) {
         // Write solution logic here
+        return {};
     }
 };
 
@@ -17,22 +17,19 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int t;
-    if (cin >> t) {
-        while (t--) {
-            int n;
-            cin >> n;
-            vector<int> nums(n);
-            for (int i = 0; i < n; i++) {
-                cin >> nums[i];
-            }
-            Solution ob;
-            vector<int> res = ob.nextGreaterElements(nums);
-            for (int i = 0; i < n; i++) {
-                cout << res[i] << " ";
-            }
-            cout << "\n";
+    int n;
+    if (cin >> n) {
+        vector<int> arr(n);
+        for (int i = 0; i < n; i++) {
+            cin >> arr[i];
         }
+        Solution ob;
+        vector<int> res = ob.prevSmaller(arr);
+        for (int i = 0; i < n; i++) {
+            cout << res[i] << " ";
+        }
+        cout << "\n";
     }
+
     return 0;
 }

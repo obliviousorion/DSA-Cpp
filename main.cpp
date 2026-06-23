@@ -2,11 +2,11 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Trapping Rain Water
+// Problem : Sum of Subarray Minimums
 
 class Solution {
 public:
-    int trap(vector<int>& height) {
+    int sumSubarrayMins(vector<int>& arr) {
         // Write solution logic here
         return 0;
     }
@@ -19,12 +19,12 @@ int main() {
 
     int n;
     if (cin >> n) {
-        vector<int> height(n);
+        vector<int> arr(n);
         for (int i = 0; i < n; i++) {
-            cin >> height[i];
+            cin >> arr[i];
         }
         Solution ob;
-        cout << ob.trap(height) << "\n";
+        cout << ob.sumSubarrayMins(arr) << "\n";
     }
 
     return 0;

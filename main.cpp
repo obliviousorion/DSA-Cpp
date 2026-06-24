@@ -2,11 +2,11 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Largest Rectangle in Histogram
+// Problem : Remove K Digits
 
 class Solution {
 public:
-    int largestRectangleArea(vector<int>& heights) {
+    string removeKdigits(string num, int k) {
         // Write solution logic here
     }
 };
@@ -16,14 +16,11 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n;
-    if (cin >> n) {
-        vector<int> heights(n);
-        for (int i = 0; i < n; i++) {
-            cin >> heights[i];
-        }
+    string num;
+    int k;
+    if (cin >> num >> k) {
         Solution ob;
-        cout << ob.largestRectangleArea(heights) << "\n";
+        cout << ob.removeKdigits(num, k) << "\n";
     }
 
     return 0;

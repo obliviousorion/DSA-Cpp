@@ -2,13 +2,12 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Sum of Subarray Minimums
+// Problem : Sum of Subarray Ranges
 
 class Solution {
 public:
-    int sumSubarrayMins(vector<int>& arr) {
+    long long subArrayRanges(vector<int>& nums) {
         // Write solution logic here
-        return 0;
     }
 };
 
@@ -19,12 +18,12 @@ int main() {
 
     int n;
     if (cin >> n) {
-        vector<int> arr(n);
+        vector<int> nums(n);
         for (int i = 0; i < n; i++) {
-            cin >> arr[i];
+            cin >> nums[i];
         }
         Solution ob;
-        cout << ob.sumSubarrayMins(arr) << "\n";
+        cout << ob.subArrayRanges(nums) << "\n";
     }
 
     return 0;

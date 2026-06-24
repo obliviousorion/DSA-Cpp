@@ -2,11 +2,11 @@
 using namespace std;
 
 // Section : Stacks and Queues
-// Problem : Sum of Subarray Ranges
+// Problem : Largest Rectangle in Histogram
 
 class Solution {
 public:
-    long long subArrayRanges(vector<int>& nums) {
+    int largestRectangleArea(vector<int>& heights) {
         // Write solution logic here
     }
 };
@@ -18,12 +18,12 @@ int main() {
 
     int n;
     if (cin >> n) {
-        vector<int> nums(n);
+        vector<int> heights(n);
         for (int i = 0; i < n; i++) {
-            cin >> nums[i];
+            cin >> heights[i];
         }
         Solution ob;
-        cout << ob.subArrayRanges(nums) << "\n";
+        cout << ob.largestRectangleArea(heights) << "\n";
     }
 
     return 0;

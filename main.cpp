@@ -1,13 +1,17 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Section : Stacks and Queues
-// Problem : Remove K Digits
+// Section : Sliding Window and Two Pointers
+// Problem : Stock span
 
-class Solution {
+class StockSpanner {
 public:
-    string removeKdigits(string num, int k) {
-        // Write solution logic here
+    StockSpanner() {
+        
+    }
+    
+    int next(int price) {
+        
     }
 };
 
@@ -16,12 +20,13 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string num;
-    int k;
-    if (cin >> num >> k) {
-        Solution ob;
-        cout << ob.removeKdigits(num, k) << "\n";
+    StockSpanner* obj = new StockSpanner();
+    int price;
+    while (cin >> price) {
+        cout << obj->next(price) << " ";
     }
+    cout << "\n";
+    delete obj;
 
     return 0;
 }

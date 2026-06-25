@@ -1,22 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Section : Linked List
-// Problem : LRU Cache
+// Section : Sliding Window and Two Pointers
+// Problem : Two Sum II - Input Array Is Sorted
 
-class LRUCache {
+class Solution {
 public:
-    LRUCache(int capacity) {
-        // Initialize capacity and any supporting structures here
-    }
-    
-    int get(int key) {
-        // Return value of key if it exists, otherwise -1
-        return -1;
-    }
-    
-    void put(int key, int value) {
-        // Insert or update key-value pair, evicting LRU if capacity is exceeded
+    bool twoSum(vector<int>& arr, int target) {
+        // Write solution logic here
+        return false;
     }
 };
 
@@ -25,24 +17,20 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int capacity;
-    if (!(cin >> capacity)) return 0;
-    
-    LRUCache* lru = new LRUCache(capacity);
-    
-    string op;
-    while (cin >> op) {
-        if (op == "put") {
-            int key, value;
-            cin >> key >> value;
-            lru->put(key, value);
-        } else if (op == "get") {
-            int key;
-            cin >> key;
-            cout << lru->get(key) << "\n";
-        }
+    int n, target;
+    if (!(cin >> n >> target)) return 0;
+
+    vector<int> arr(n);
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
     }
-    
-    delete lru;
+
+    Solution solver;
+    if (solver.twoSum(arr, target)) {
+        cout << "true\n";
+    } else {
+        cout << "false\n";
+    }
+
     return 0;
 }

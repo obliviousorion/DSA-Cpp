@@ -1,17 +1,22 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// Section : Sliding Window and Two Pointers
-// Problem : Stock span
+// Section : Linked List
+// Problem : LRU Cache
 
-class StockSpanner {
+class LRUCache {
 public:
-    StockSpanner() {
-        
+    LRUCache(int capacity) {
+        // Initialize capacity and any supporting structures here
     }
     
-    int next(int price) {
-        
+    int get(int key) {
+        // Return value of key if it exists, otherwise -1
+        return -1;
+    }
+    
+    void put(int key, int value) {
+        // Insert or update key-value pair, evicting LRU if capacity is exceeded
     }
 };
 
@@ -20,13 +25,24 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    StockSpanner* obj = new StockSpanner();
-    int price;
-    while (cin >> price) {
-        cout << obj->next(price) << " ";
+    int capacity;
+    if (!(cin >> capacity)) return 0;
+    
+    LRUCache* lru = new LRUCache(capacity);
+    
+    string op;
+    while (cin >> op) {
+        if (op == "put") {
+            int key, value;
+            cin >> key >> value;
+            lru->put(key, value);
+        } else if (op == "get") {
+            int key;
+            cin >> key;
+            cout << lru->get(key) << "\n";
+        }
     }
-    cout << "\n";
-    delete obj;
-
+    
+    delete lru;
     return 0;
 }

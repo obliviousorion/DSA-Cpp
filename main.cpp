@@ -2,13 +2,33 @@
 using namespace std;
 
 // Section : Sliding Window and Two Pointers
-// Problem : Two Sum II - Input Array Is Sorted
+// Problem : Square Sorter
+
+/*
+Problem Statement:
+Given an integer array nums sorted in non-decreasing order, 
+return an array of the squares of each number sorted in non-decreasing order.
+
+Constraints:
+1 <= nums.size() <= 10^4
+-10^4 <= nums[i] <= 10^4
+nums is sorted in non-decreasing order.
+
+Time Complexity Goal: O(N)
+Auxiliary Space Complexity Goal: O(1) (excluding the returned output array)
+
+Example:
+Input: nums = [-4, -1, 0, 3, 10]
+Output: [0, 1, 9, 16, 100]
+Explanation: After squaring, the array becomes [16, 1, 0, 9, 100]. 
+Sorted order is [0, 1, 9, 16, 100].
+*/
 
 class Solution {
 public:
-    bool twoSum(vector<int>& arr, int target) {
+    vector<int> sortedSquares(vector<int>& nums) {
         // Write solution logic here
-        return false;
+        return {};
     }
 };
 
@@ -17,20 +37,21 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    int n, target;
-    if (!(cin >> n >> target)) return 0;
+    int n;
+    if (!(cin >> n)) return 0;
 
-    vector<int> arr(n);
+    vector<int> nums(n);
     for (int i = 0; i < n; i++) {
-        cin >> arr[i];
+        cin >> nums[i];
     }
 
     Solution solver;
-    if (solver.twoSum(arr, target)) {
-        cout << "true\n";
-    } else {
-        cout << "false\n";
+    vector<int> ans = solver.sortedSquares(nums);
+
+    for (int i = 0; i < ans.size(); i++) {
+        cout << ans[i] << (i == ans.size() - 1 ? "" : " ");
     }
+    cout << "\n";
 
     return 0;
 }

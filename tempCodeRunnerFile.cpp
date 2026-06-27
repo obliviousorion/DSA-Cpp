@@ -1,17 +1,16 @@
-     }
-
-    int trap(vector<int>& height) {
-        vector<int> original = height;
+    int maxArea(vector<int>& height) {
         int n = height.size();
-        vector<int> suffixMaxx = suffixMax(original, original.size());
-        vector<int> prefixMaxx = prefixMax(original, original.size());
-        int total = 0;
-        for (int i = 0; i < n; i++) {
-            int leftmax = prefixMaxx[i];
-            int rightmax = suffixMaxx[i];
-            if (height[i] < leftmax && height[i] < rightmax) {
-                total += (min(rightmax, leftmax)-height[i]);
+        int low = 0, high = n - 1;
+        int max_area = 0;
+
+        while (low<high) {
+            int area = (high - low + 1) * min(height[low], height[high]);
+            if (height[low] <= height[high]) {
+                low++;
+            } else {
+                high--;
             }
-        }
-        return total;
+            max_area = max(max_area, area);
+        } 
+        return max_area;
     }

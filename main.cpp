@@ -6,8 +6,8 @@ using namespace std;
 
 /*
 Problem Statement:
-Given a binary array nums and an integer goal, return the number of non-empty subarrays 
-with a sum equal to goal.
+Given a binary array nums and an integer goal, return the number of non-empty
+subarrays with a sum equal to goal.
 
 Constraints:
 1 <= nums.length <= 3 * 10^4
@@ -28,28 +28,52 @@ Explanation: The 4 subarrays are:
 */
 
 class Solution {
-public:
-    int numSubarraysWithSum(vector<int>& nums, int goal) {
-        // Write solution logic here
-        return 0;
+    int atmost(vector<int> &nums, int goal) {
+        // Guard clause for when goal - 1 becomes -1
+        if (goal < 0) return 0; 
+
+        int count = 0;
+        int n = nums.size();
+        int l_ptr = 0;
+        int sum = 0;
+        
+        // Fixed: initialized r_ptr to 0
+        for (int r_ptr = 0; r_ptr < n; r_ptr++) { 
+            sum += nums[r_ptr];
+
+            while (sum > goal) {
+                sum -= nums[l_ptr++];
+            }
+            
+            // Fixed: Removed the 'if' condition. 
+            // Any window here has a sum <= goal, so all its subarrays are valid.
+            count += r_ptr - l_ptr + 1;
+        }
+        return count;
     }
+
+public:
+  int numSubarraysWithSum(vector<int> &nums, int goal) {
+    return atmost(nums, goal) - atmost(nums, goal - 1);
+  }
 };
 
 int main() {
-    // Fast I/O
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
+  // Fast I/O
+  ios_base::sync_with_stdio(false);
+  cin.tie(NULL);
 
-    int n, goal;
-    if (!(cin >> n >> goal)) return 0;
-
-    vector<int> nums(n);
-    for (int i = 0; i < n; i++) {
-        cin >> nums[i];
-    }
-
-    Solution solver;
-    cout << solver.numSubarraysWithSum(nums, goal) << "\n";
-
+  int n, goal;
+  if (!(cin >> n >> goal))
     return 0;
+
+  vector<int> nums(n);
+  for (int i = 0; i < n; i++) {
+    cin >> nums[i];
+  }
+
+  Solution solver;
+  cout << solver.numSubarraysWithSum(nums, goal) << "\n";
+
+  return 0;
 }

@@ -2,34 +2,34 @@
 using namespace std;
 
 // Section : Sliding Window and Two Pointers
-// Problem : Longest Repeating Character Replacement
+// Problem : Binary Subarrays With Sum
 
 /*
 Problem Statement:
-You are given a string s and an integer k. You can choose any character of the string 
-and change it to any other uppercase English character. You can perform this operation 
-at most k times.
-
-Return the length of the longest substring containing the same letter you can get after 
-performing the above operations.
+Given a binary array nums and an integer goal, return the number of non-empty subarrays 
+with a sum equal to goal.
 
 Constraints:
-1 <= s.length <= 10^5
-s consists of only uppercase English letters.
-0 <= k <= s.length
+1 <= nums.length <= 3 * 10^4
+nums[i] is either 0 or 1.
+0 <= goal <= nums.length
 
 Time Complexity Goal: O(N)
 Auxiliary Space Complexity Goal: O(1)
 
 Example:
-Input: s = "ABAB", k = 2
+Input: nums = [1, 0, 1, 0, 1], goal = 2
 Output: 4
-Explanation: Replace the two 'A's with two 'B's or vice versa.
+Explanation: The 4 subarrays are:
+- [1, 0, 1] (indices 0 to 2)
+- [1, 0, 1, 0] (indices 0 to 3)
+- [0, 1, 0, 1] (indices 1 to 4)
+- [1, 0, 1] (indices 2 to 4)
 */
 
 class Solution {
 public:
-    int characterReplacement(string s, int k) {
+    int numSubarraysWithSum(vector<int>& nums, int goal) {
         // Write solution logic here
         return 0;
     }
@@ -40,12 +40,16 @@ int main() {
     ios_base::sync_with_stdio(false);
     cin.tie(NULL);
 
-    string s;
-    int k;
-    if (!(cin >> s >> k)) return 0;
+    int n, goal;
+    if (!(cin >> n >> goal)) return 0;
+
+    vector<int> nums(n);
+    for (int i = 0; i < n; i++) {
+        cin >> nums[i];
+    }
 
     Solution solver;
-    cout << solver.characterReplacement(s, k) << "\n";
+    cout << solver.numSubarraysWithSum(nums, goal) << "\n";
 
     return 0;
 }

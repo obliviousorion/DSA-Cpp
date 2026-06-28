@@ -1,5 +1,24 @@
+/*
+ * Problem: Papyrus's Puzzle (Convert Array a to Array b)
+ * Contest: Codeforces Round 1106 (Div. 2) Problem A
+ * 
+ * Time Complexity: O(N log N) - Sorting arrays a and b takes O(N log N) time.
+ * Space Complexity: O(1) auxiliary space - Sorting is done in-place on the input vectors.
+ * 
+ * Description:
+ * Determine the minimum cost to convert array a to array b.
+ * We can either convert without reordering, or reorder the elements of array a and b at cost c.
+ * In both cases, array a can only be converted to array b if every element a[i] >= b[i].
+ *
+ * Hint/Approach:
+ * 1. Without reordering: Directly compare a[i] and b[i]. If any a[i] < b[i], conversion is impossible. Otherwise, the cost is the sum of differences.
+ * 2. With reordering: Sort both arrays first, then compare element-wise. The cost is c + sum of differences of sorted elements.
+ * 3. Return the minimum of the two costs if both are possible, or the only possible one, or -1 if impossible.
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
+
 // CodeForces Round 1106 Div 2. Problem A.
 // Section : Greedy
 // Problem : Papyrus's Puzzle (Convert Array a to Array b)

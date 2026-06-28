@@ -1,3 +1,20 @@
+/*
+ * Problem: Storming Arasaka (Layered Divisors)
+ * Contest: Codeforces Round 1106 (Div. 2) Problem D
+ * 
+ * Time Complexity: O(MAXN log log MAXN) precomputation, O(log N) per query.
+ * Space Complexity: O(MAXN) auxiliary space for the Smallest Prime Factor (SPF) array.
+ * 
+ * Description:
+ * Determine the minimum number of layers/operations to reduce or decompose a number N using divisor rules.
+ *
+ * Hint/Approach:
+ * 1. Precompute the Smallest Prime Factor (SPF) for all numbers up to 1,000,000 using a sieve.
+ * 2. For each query, perform prime factorization of N in O(log N) time using the SPF array.
+ * 3. Count total prime factors (with multiplicity) and distinct prime factors.
+ * 4. The minimum layers formula is derived as: total_factors + distinct_factors - 1.
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
 

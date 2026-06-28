@@ -1,7 +1,27 @@
+/*
+ * Problem: Guilds in a Rooted Tree
+ * Contest: Codeforces Round 1106 (Div. 2) Problem C
+ * 
+ * Time Complexity: O(N) - Linear scan to compute depths and max subtree depths.
+ * Space Complexity: O(N) - Arrays for depths, max_depths, and child tracking.
+ * 
+ * Description:
+ * Count the total number of distinct guilds in a rooted tree. Each node starts with a unique
+ * guild of size 1. A parent node can form distinct guilds with its children depending on the
+ * subtree depth combinations.
+ *
+ * Hint/Approach:
+ * 1. Compute depths in a forward pass (since parent[i] < i).
+ * 2. Compute max_depth for each subtree in a backward pass.
+ * 3. For each parent, track the top 2 largest subtree depths among its children.
+ * 4. The number of distinct multi-node guilds formed by parent i is (max2[i] - depth[i]) if a second child exists.
+ * 5. Add this to the base guild count of n.
+ */
+
 #include <bits/stdc++.h>
 using namespace std;
-// CodeForces Round 1106 Div 2. Problem C.
 
+// CodeForces Round 1106 Div 2. Problem C.
 
 // Section : Trees / DFS / Graph Algorithms
 // Problem : Guilds in a Rooted Tree

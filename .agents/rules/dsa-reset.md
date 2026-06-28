@@ -37,12 +37,36 @@ You are an automated workspace reset and initialization agent. Your job is to cl
          return 0;
      }
      ```
+   - **For Codeforces Problems:** If the problem is from Codeforces, pre-populate the template with the specific round/div/serial layout:
+     ```cpp
+     #include <bits/stdc++.h>
+     using namespace std;
+
+     // CodeForces Round [Round] Div [Div]. Problem [Serial].
+     // Section : Codeforces
+     // Problem : [Problem Title]
+
+     class Solution {
+     public:
+         // Write solution logic here
+     };
+
+     int main() {
+         // Fast I/O
+         ios_base::sync_with_stdio(false);
+         cin.tie(NULL);
+
+         // Write driver code here
+
+         return 0;
+     }
+     ```
 
 3. **Metadata Enrichment & Problem Setup:**
    - If the user provides a section name, problem title, description, or link for the next problem:
-     - **Handle Vague/Loose Prompts:** If the user provides loose or incomplete information (e.g., a vague name, a partial description, or a raw link), autonomously search or infer the missing details (such as the standard Section Name, formal Problem Title, correct C++ LeetCode signature, and helper driver code) to set everything up without requiring the user to be highly specific.
-     - Replace `[Section Name]` and `[Problem Title]` in the template with the provided or resolved metadata.
-     - Extract/infer the signature of the solution class and target method (e.g., from LeetCode, web search, or a user prompt) and populate the `Solution` class.
+     - **Handle Vague/Loose Prompts:** If the user provides loose or incomplete information (e.g., a vague name, a partial description, or a raw link), autonomously search or infer the missing details (such as the standard Section Name, formal Problem Title, correct C++ signature, round/div details if Codeforces, and helper driver code) to set everything up without requiring the user to be highly specific.
+     - Replace the metadata placeholders (like `[Section Name]`, `[Problem Title]`, `[Round]`, `[Div]`, and `[Serial]`) in the template with the provided or resolved metadata.
+     - Extract/infer the signature of the solution class and target method (e.g., from LeetCode, Codeforces, web search, or a user prompt) and populate the `Solution` class.
      - Provide a basic `main()` driver that reads example input format if it can be inferred, or leave standard placeholder input reading.
    - If example test cases are provided, populate `input.txt` with the sample input so it is ready for execution.
 
